@@ -1,0 +1,205 @@
+
+/* Section======================================================================================= */
+/* 
+.section {
+    margin: 5px 10px;
+    color: rgb(0, 0, 0);
+    background: rgb(125,125,125);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    font-family: "Roboto";
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    animation: apparitio_section 2s ease forwards;
+    font-size: 1.8vh;
+    max-width: 900px ;
+}
+
+.section .titre_carte{
+    text-align: center;
+}
+
+.retour_presentation{
+    cursor: pointer;
+    display: none;
+    position: sticky ;
+    height: 0;
+    justify-content: end;
+    top: 100px;
+    font-size: 50px;
+    z-index: 10;
+    padding-right: 30px;
+    max-width: 900px;
+}
+
+#Mon_experience a{
+    color: black;
+    text-decoration:underline;
+}
+
+#Mon_experience a img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+#logiciels .ligne_logo {
+    flex-wrap: wrap;
+}
+
+#logiciels h3{
+    text-align: center;
+}
+
+@keyframes apparitio_section {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+.ligne_section{
+    margin: 0;
+    padding: 0 3vw 20px 3vw  ;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(252,252,252,0) 0%, rgba(3, 7, 18, 0.045) 100%);
+} */
+
+
+
+
+/* =======================================================================================Section */
+
+
+/* Galerie carousel============================================================================== */
+
+/* body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.galerie { 
+  display: flex;
+  background: #030712; 
+  width: 100%;
+  max-width: 900px;
+  border-radius:20px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  transition: 0.1s;
+}
+
+.galerie .wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.galerie .slider{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.image_galerie{
+    width: calc(94vw - 55px);
+    max-width: calc( 860px - 6vw) ;
+    border-radius: 15px;
+}
+
+.galerie .slides{
+    list-style: none;
+    margin: 10px;
+}
+
+.logo_youtube{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.galerie .fa-youtube{
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12vw;
+    z-index: 15;
+    right: 5px;
+    height: 100%;
+
+    transition: 0.6s;
+}
+
+.galerie .fa-youtube:hover{
+    color: #c4302b;
+    cursor: pointer;
+}
+
+.button_galerie{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 800px;
+    top: -2%;
+    margin: auto;
+    font-size: 50px;
+    color: #ffffffde;
+
+}
+
+.button_galerie p {
+    font-size: 1.8vh;
+}
+
+.button_galerie .fa-chevron{
+    position: absolute;
+    z-index: 10;
+}
+
+ .fa-chevron-left:hover{
+    color: #888; 
+    cursor: pointer;
+}
+.fa-chevron-right:hover{
+    color: #888; 
+    cursor: pointer;
+}
+
+
+.player_video{
+    position: sticky;
+    top: 0;
+
+    z-index: 20;
+    background-color: #030712;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+.player_video i:hover{
+        color: #888; 
+    cursor: pointer;
+} */
+  
+
+/* ==============================================================================Galerie carousel */

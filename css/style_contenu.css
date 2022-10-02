@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Tourney";
+  transition: 1s;
+  position: relative;
+}
+
+
+
+
+/* navigateur/header============================================================================= */
+
+/* header----------------------------------------- */
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 20px 30px;
+    z-index: 10;
+    background: rgba(235, 235, 235, 0.318);
+    animation: apparition_nav 0.5s ease forwards;
+}
+
+.navConteneur{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    font-size: 30px;
+    opacity: 0;
+    animation: apparition_nav2 0.7s ease-out forwards;
+}
+
+@keyframes apparition_nav {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes apparition_nav2 {
+    from{
+        opacity: 0;
+        top: -90px;
+    }
+    to{
+        opacity: 100%;
+        top: 0;
+    }
+}
+
+/* -----------------------------------------------------------------------header */
+
+/* nav/menu--------------------------------------------------------------------- */
+
+#menuLogo{
+    cursor: pointer;
+    content: \000A9;
+    margin: 0px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#navTitre{
+    margin: 0px;
+    padding: 0;
+}
+
+#menuLogo div{
+
+    height: 0px;
+    border-radius: 3px;
+    border: solid 1px #fcf3e2;
+    transition: 0.2s;
+    background-color: #fcf3e2;
+}
+
+.line#haut{
+    position: relative;
+    rotate: 45deg;
+    top: 10px;
+}
+
+.line#centre{
+    opacity: 0;
+}
+
+.line#bas{
+    position: relative;
+    rotate: -45deg;
+    top: -10px;
+}
+
+
+#menu{
+    background: rgba(235, 235, 235, 0.318);
+    position: sticky;
+    z-index: 10;
+    top: 90px;
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fcf3e2;
+    opacity: 0;
+    transition: 1s;
+    animation: 0.2s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes apparition_menu {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes disparition_menu {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+.nav_item{
+    padding: 0 5vw;
+    color: #fcf3e2;
+    height: 78px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.nav_item:hover{
+    transform: translateX(10%);
+}
+
+.fa-arrow-right{
+    font-size: 30px;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vmax;
+}
+
+#contact .fa-code{
+    padding: 30px;
+    font-size: 30px;
+    color: #ff5a12;
+}
+
+.contact_nav{
+    font-family: "Roboto";
+    font-size: 20px;
+    margin: 5px;
+    color: #fcf3e2;
+}
+
+a {
+    text-decoration: none;
+    color: #fcf3e2;
+}
+
+
+#menu ul {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #fcf3e2;
+    list-style: none;
+    font-size: 30px;
+    width: 200px;
+    position: relative;
+    opacity: 0;
+    animation: apparition_logo 0.2s ease 1s forwards;
+}
+
+@keyframes apparition_logo {
+    from{
+        opacity: 0;
+        bottom: -3%;
+    }
+    to{
+        bottom: 0;
+        opacity: 100%;
+    }
+}
+
+.lineMenu{
+    border: 1px solid #fcf3e2;
+    height: 0;
+    margin: 0;
+    position: relative;
+    opacity: 0;
+} 
+
+/* apparition des LIGNES du menu ---------------------------------------- */
+
+.L1{
+    animation: apparition_ligne 1s ease  forwards ;
+}
+.L2{
+    animation: apparition_ligne 1s ease 0.1s forwards;
+}
+.L3{
+    animation: apparition_ligne 1s ease 0.2s forwards ;
+}
+.L4{
+    animation: apparition_ligne 1s ease 0.3s forwards;
+}
+.L5{
+    animation: apparition_ligne 1s ease 0.4s forwards;
+}
+
+@keyframes apparition_ligne {
+    from{
+        opacity: 0;
+        left: -100vw;
+    }
+    to{
+        left: 0;
+        opacity: 100%;
+    }
+    
+} 
+
+/* --- apparition des LIGNES du menu */
+
+/* apparition des SECTIONS du menu --- */
+ 
+.S1{
+    animation: apparition_section_menu 1s ease 1s forwards ;
+}
+.S2{
+    animation: apparition_section_menu 1s ease 1.1s forwards;
+}
+.S3{
+    animation: apparition_section_menu 1s ease 1.2s forwards ;
+}
+.S4{
+    animation: apparition_section_menu 1s ease 1.3s forwards;
+}
+.S5{
+    animation: apparition_section_menu 1s ease 1.4s forwards;
+}
+
+@keyframes apparition_section_menu {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+    
+}
+
+
+/* --------------------------------------------------- apparition des SECTIONS du menu */
+
+/* ---------------------------------------------------------------------------nav/menu */
+
+/* =============================================================================navigateur/header */
