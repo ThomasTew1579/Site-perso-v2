@@ -1,0 +1,55 @@
+@media screen and (min-width: 1200px) {
+
+    nav{    
+        padding: 10px 20%;
+    }
+
+    .liste_cartes{
+        display: none;
+    }
+
+    .liste_cartes_descktop{
+        position: fixed ;
+        display: flex;
+        color: #fcf3e2;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: calc(100vh - 80px);
+        width: 30%;
+        left: 8%;
+        top: 80px;
+        transition: 0.5s;
+    }
+
+    .origine{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section{
+        position: relative;
+        width: 55vw;
+        right: -38%;
+    }
+
+    .flexX{
+        display: none;
+    }
+
+    .image_galerie{
+    width: calc(55vw - 6vw - 20px);
+    border-radius: 15px;
+    }
+
+    #menuLogo{
+        display: none;
+    }
+
+    #menuLiens a{
+        margin-left: 2vw;
+    }
+
+}

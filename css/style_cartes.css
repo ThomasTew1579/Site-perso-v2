@@ -6,7 +6,18 @@
     margin: 0;
     padding: 0;
     height: calc(100vh - 70px);
-    
+}
+
+.liste_cartes_descktop{
+    display: none;
+}
+
+.flexL{
+    display: flex;
+}
+
+.pasFlexL{
+    display: none;
 }
 
 .apparition_liste_carte_section{
@@ -16,9 +27,6 @@
 
 @keyframes apparition_liste_carte_section {
     from{
-        opacity: 0;
-    }
-    50%{
         opacity: 0;
     }
     to{
@@ -86,7 +94,7 @@
     /* display: none; */
     height: calc(73vh - 90px);
     margin: 0 5% 0 5%;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     text-justify:inter-word;
     text-align:left;
@@ -110,14 +118,6 @@
 
 .activeContenu{
     display: flex;
-    /* opacity: 0; */
-    /* animation: apparition_contenue_carte 0.5s linear 0.5s forwards; */
-}
-
-@keyframes apparition_contenue_carte {
-    to{
-        opacity: 100%;
-    }
 }
 
 /* carte presentation------------ */
@@ -170,6 +170,8 @@
     flex-direction: row;
     align-items: center;
 }
+
+
 
 .ligne_logo img{
     margin-bottom: 2vh;

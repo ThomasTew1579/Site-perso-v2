@@ -44,19 +44,20 @@ function fermerSection(indexSection){
       section[index].style.display = "none";
     }
   }
+  decaler();
   menu.classList.add("disparition_menu");
-  listeCarte.classList.add("disparition_liste_carte_section");
-  listeCarte.style.display = "none";
-  retourPresentation.style.display = "none";
+  listeCarte.classList.replace("apparition_liste_carte_section","disparition_liste_carte_section");
+  listeCarte.classList.replace("flexL", "pasFlexL");
+  retourPresentation.classList.replace("flexX", "pasFlexX");
   setTimeout(() => {
     menu.style.display = "none";
-    if(indexSection == "m"){
+    if(indexSection === "m"){
       listeCarte.classList.replace("disparition_liste_carte_section","apparition_liste_carte_section");
-      retourPresentation.style.display = "none";
-      listeCarte.style.display="flex"
+      retourPresentation.classList.replace("flexX", "pasFlexX");
+      listeCarte.classList.replace("pasFlexL", "flexL");
     } else {
       section[indexSection].style.display = "flex";
-      retourPresentation.style.display = "flex";
+      retourPresentation.classList.replace("pasFlexX", "flexX");;
     }
   }, 200);
 }
@@ -70,10 +71,10 @@ btnMenu.addEventListener("click", () => {
   if(menu.style.display == "flex"){
     menu.style.opacity ="100%"
     menu.style.animationName = "disparition_menu";
-    retourPresentation.style.display = "none";
+    retourPresentation.classList.replace("flexX" , "pasFlexX");
     setTimeout( () => { menu.style.display = "none"},200)
   }else{
-    retourPresentation.style.display = "flex";
+    retourPresentation.classList.replace("pasFlexX", "flexX");
     menu.style.opacity ="0%"
     menu.style.animationName = "apparition_menu";
     menu.style.animationDuration = "0.5s";
@@ -119,12 +120,17 @@ logicielsMenu.addEventListener("click", () => {
 
 // annimation carte section----------------------------------------------------
 
+
 let contenuCarte      = document.getElementsByClassName("contenu_carte");
 let carte             = document.getElementsByClassName("carte")
 let listeCarte        = document.querySelector(".liste_cartes");
+let listeCarteD        = document.querySelector(".liste_cartes_descktop");
 let section           = document.getElementsByClassName("section");
 
 
+function decaler () {
+        listeCarteD.classList.remove("origine");
+}
 
 // affichage du contenu des cartes de presentation
 function activationCarte(indexCarte) {
@@ -132,9 +138,6 @@ function activationCarte(indexCarte) {
     if (index <= carte.length - 1) {
       carte[index].classList.remove("activeCarte");
       carte[indexCarte].classList.add("activeCarte");
-
-      // contenuCarte[index].classList.remove("activeContenu");
-      // contenuCarte[indexCarte].classList.add("activeContenu");
     }
   }
 }
@@ -147,6 +150,17 @@ contenuCarte[0].addEventListener("click", () => {
       fermerSection(0)
 })
 
+document.querySelector(".C2 .descktop").addEventListener("click", () => {
+  activationCarte(4);
+});
+    
+contenuCarte[4].addEventListener("click", () => {
+      fermerSection(0)
+      decaler();
+})
+
+// ==================
+
 document.querySelector(".C3 .titre_carte").addEventListener("click", () => {
   activationCarte(1);
 });
@@ -154,6 +168,16 @@ document.querySelector(".C3 .titre_carte").addEventListener("click", () => {
 contenuCarte[1].addEventListener("click", () => {
   fermerSection(1);
 });
+
+document.querySelector(".C3 .descktop").addEventListener("click", () => {
+  activationCarte(5);
+});
+
+contenuCarte[5].addEventListener("click", () => {
+  fermerSection(1)
+});
+
+// ====================
 
 document.querySelector(".C4 .titre_carte").addEventListener("click", () => {
   activationCarte(2);
@@ -163,8 +187,21 @@ contenuCarte[2].addEventListener("click", () => {
   fermerSection(2);
 });
 
+document.querySelector(".C4 .descktop").addEventListener("click", () => {
+  activationCarte(6);
+});
+
+contenuCarte[6].addEventListener("click", () => {
+  fermerSection(2);
+   decaler();
+});
+
 document.querySelector(".C1 .titre_carte").addEventListener("click", () => {
   activationCarte(3);
+});
+
+document.querySelector(".C1 .descktop").addEventListener("click", () => {
+  activationCarte("7");
 });
 
 

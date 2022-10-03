@@ -10,6 +10,7 @@ function activeContenu(){
 function positionAleatoire() {
   let top = Math.floor(Math.random() * visualViewport.height * 0.8);
   let left = Math.floor(Math.random() * visualViewport.width * 0.8);
+  // descktop(visualViewport.width);
   return [top, left];
 }
 
@@ -70,3 +71,4 @@ function creeParticule() {
     bulleA.remove();
   }, timing * 1500);
 }
+

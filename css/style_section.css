@@ -5,17 +5,14 @@
     margin: 5px 10px;
     color: rgb(0, 0, 0);
     background: rgba(255, 255, 255, 0.463);
-    /* background: rgb(125,125,125); */
-    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%); */
     border-radius: 6px;
     transition: 0.5s ease;
     font-family: "Roboto";
     display: none;
     flex-direction: column;
     opacity: 0;
-    animation: apparitio_section 2s ease forwards;
+    animation: apparitio_section 1s ease forwards;
     font-size: 1.8vh;
-    /* max-width: 900px ; */
     backdrop-filter: blur(10px);
 }
 
@@ -26,7 +23,6 @@
 
 .retour_presentation{
     cursor: pointer;
-    display: none;
     position: sticky ;
     height: 0;
     justify-content: end;
@@ -35,6 +31,14 @@
     z-index: 10;
     padding-right: 30px;
     top: 82px; 
+}
+
+.flexX{
+    display: flex;
+}
+
+.pasFlexX{
+    display: none;
 }
 
 .retour_presentation i{
@@ -100,7 +104,6 @@
   display: flex;
   background: #030712df; 
   width: 100%;
-  max-width: 900px;
   border-radius:20px;
   margin: 0;
   padding: 0;
@@ -126,7 +129,6 @@
 
 .image_galerie{
     width: calc(98vw - 55px);
-    /* max-width: calc( 860px - 6vw) ; */
     border-radius: 15px;
 }
 
