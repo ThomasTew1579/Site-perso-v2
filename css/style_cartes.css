@@ -5,13 +5,16 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: calc(100vh - 90px);
-    animation: apparition 0.5s ease  forwards;
-
+    height: calc(100vh - 70px);
+    
 }
 
+.apparition_liste_carte_section{
+    opacity: 0;
+    animation: apparition_liste_carte_section 0.5s ease  forwards;
+}
 
-@keyframes apparition {
+@keyframes apparition_liste_carte_section {
     from{
         opacity: 0;
     }
@@ -23,11 +26,11 @@
     }
 }
 
-.disparition{
-    animation: disparition 0.5s ease forwards;
+.disparition_liste_carte_section{
+    animation: disparition_liste_carte 0.3s ease forwards;
 }
 
-@keyframes disparition {
+@keyframes disparition_liste_carte_section {
     from{
         opacity: 100%;
     }
@@ -40,14 +43,18 @@
     cursor: pointer;
     margin: 5px 10px;
     color: rgb(0, 0, 0);
-    border-radius: 10px;
+    border-radius: 6px;
     transition: 0.5s ease;
     text-align: center;
     font-family: "Roboto";
-    font-size: 1.8vh;
-    height: 55px;
+    font-size: 1rem;
+    line-height: 1.4;
+    height: 6vh;
     flex-grow: 0;
     overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.463);
 }
 
 .titre_carte{
@@ -55,35 +62,40 @@
 	border-bottom: 1px solid rgba(0,0,0,0.1);
     display: flex;
     align-content: center;
+    justify-content: center;
+    height: 6vh;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.665);
+    
 }
 
 .titre_carte h3{
+    margin: auto;
     flex-grow: 1;
     font-family: "Tourney";
+    font-size: 2vh;
 }
 
 .titre_carte i{
     margin: auto;
-    font-size: 30px;
+    font-size: 3vh;
     padding-left: 20px;
-    
     z-index: 2;
 }
 
 .contenu_carte{
-    display: none;
-    height: calc(100vh - 380px);
+    /* display: none; */
+    height: calc(73vh - 90px);
     margin: 0 5% 0 5%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
     text-justify:inter-word;
     text-align:left;
-    opacity: 0;
+    /* opacity: 0; */
+    
 } 
 
 .contenu_carte i{
     text-align: center;
-    font-size: 5vh;
 }
 
 .contenu_carte h4{
@@ -98,8 +110,8 @@
 
 .activeContenu{
     display: flex;
-    opacity: 0;
-    animation: apparition_contenue_carte 0.5s linear 0.5s forwards;
+    /* opacity: 0; */
+    /* animation: apparition_contenue_carte 0.5s linear 0.5s forwards; */
 }
 
 @keyframes apparition_contenue_carte {
@@ -110,11 +122,6 @@
 
 /* carte presentation------------ */
 
-.C1.background {
-    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/893d6a152109661.6318375f0f71c.jpg); */
-    background: rgba(255, 255, 255, 0.463);
-    background-position:  40%;
-}
 
 .C1 a {
     color: black;
@@ -125,6 +132,7 @@
     text-align: center;
     list-style: none;
     padding: 0;
+    margin-bottom: 10px;
 }
 
 .contact_carte a{
@@ -137,26 +145,12 @@
     color: rgba(0, 0, 0, 0.604);
 }
 
-.lien_carte{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-}
 
-.lien_carte a:hover{
-    color: rgba(0, 0, 0, 0.604);
-}
 
 /* ----------------------------------------------carte presentation */
 
 /* carte experience------------------------------------------------ */
 
-.C2.background {
-    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(../images/IMG_0768.jpeg); */
-    background: rgba(255, 255, 255, 0.463);
-    background-position: 50%;
-}
 
 .C2 ul{
     height: 90%;
@@ -169,10 +163,6 @@
 
 /* carte logiciel--------------------------------------------------- */
 
-.C3.background {
-    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/3f0b08152450191.631eda6d6a397.jpg); */
-    background: rgba(255, 255, 255, 0.463);
-}
 
 .ligne_logo{
     display: flex;
@@ -186,17 +176,37 @@
     height: 6vh;
 }
 
+.code_logo img{
+    height: 10vh;
+    margin-top: 2vh;
+}
+
+.adobe{
+    width: 300%;
+    justify-content: space-around;
+    animation: defiler 10s linear infinite;
+}
+
+.dessin{
+    width: 400%;
+    justify-content: space-around;
+    animation: defiler 10s linear infinite reverse;
+}
+
+@keyframes defiler {
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(-50%);
+    }   
+}
+
 
 /* ---------------------------------------------------carte logiciel */
 
 /* carte diplomes---------------------------------------------------- */
 
-.C4.background {
-    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/
-    fs/70c923152276535.631b0623d30fa.jpg); */
-    background: rgba(255, 255, 255, 0.463);
-    background-position: 50%;
-}
 
 .C4 ul{
     height: 90%;

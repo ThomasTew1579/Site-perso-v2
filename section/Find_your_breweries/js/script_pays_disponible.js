@@ -16,7 +16,6 @@ function selectionPays(reponse) {
     return tableauPays.indexOf(a) == b;
   });
   document.querySelector("#aviable").textContent = listePays.join(" , ");
-  console.log(listePays)
   return listePays
 
   

@@ -1,12 +1,13 @@
 
 /* Section======================================================================================= */
-/* 
+
 .section {
     margin: 5px 10px;
     color: rgb(0, 0, 0);
-    background: rgb(125,125,125);
-    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.463);
+    /* background: rgb(125,125,125); */
+    /* background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%); */
+    border-radius: 6px;
     transition: 0.5s ease;
     font-family: "Roboto";
     display: none;
@@ -14,11 +15,13 @@
     opacity: 0;
     animation: apparitio_section 2s ease forwards;
     font-size: 1.8vh;
-    max-width: 900px ;
+    /* max-width: 900px ; */
+    backdrop-filter: blur(10px);
 }
 
 .section .titre_carte{
     text-align: center;
+    border-radius:  6px 6px 0 0 ;
 }
 
 .retour_presentation{
@@ -27,14 +30,29 @@
     position: sticky ;
     height: 0;
     justify-content: end;
-    top: 100px;
-    font-size: 50px;
+    font-size: 3vh;
+    text-align: center;
     z-index: 10;
     padding-right: 30px;
-    max-width: 900px;
+    top: 82px; 
 }
 
-#Mon_experience a{
+.retour_presentation i{
+    line-height: 1.4;
+    z-index: 100;
+    border-radius: 50%;
+    background:#FF5F4F;
+    width: 4vh;
+    height: 4vh;
+    color: rgba(255, 255, 255, 0.805);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+}
+
+.projet_code {
+    position: relative;
+    display: block;
+    left: 10%;
+    margin: auto;
     color: black;
     text-decoration:underline;
 }
@@ -66,7 +84,8 @@
     padding: 0 3vw 20px 3vw  ;
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(252,252,252,0) 0%, rgba(3, 7, 18, 0.045) 100%);
-} */
+    overflow: hidden;
+} 
 
 
 
@@ -76,18 +95,10 @@
 
 /* Galerie carousel============================================================================== */
 
-/* body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .galerie { 
   display: flex;
-  background: #030712; 
+  background: #030712df; 
   width: 100%;
   max-width: 900px;
   border-radius:20px;
@@ -114,8 +125,8 @@
 }
 
 .image_galerie{
-    width: calc(94vw - 55px);
-    max-width: calc( 860px - 6vw) ;
+    width: calc(98vw - 55px);
+    /* max-width: calc( 860px - 6vw) ; */
     border-radius: 15px;
 }
 
@@ -185,7 +196,8 @@
     top: 0;
 
     z-index: 20;
-    background-color: #030712;
+    background-color: #030712d0;
+    backdrop-filter: blur(3px);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -199,7 +211,7 @@
 .player_video i:hover{
         color: #888; 
     cursor: pointer;
-} */
+}
   
 
 /* ==============================================================================Galerie carousel */

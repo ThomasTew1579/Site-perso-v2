@@ -8,166 +8,110 @@ let lineMenuH = document.getElementById("haut");
 let lineMenuC = document.getElementById("centre");
 let lineMenuB = document.getElementById("bas");
 
+
+let presentationMenu = document.querySelector(".S1");
+let experienceMenu = document.querySelector(".S2");
+let formationMenu = document.querySelector(".S3");
+let logicielsMenu = document.querySelector(".S4");
+let retourPresentation = document.querySelector(".retour_presentation");
+
+
 let menu = document.getElementById('menu')
+
+
+
+
+// modification du logo menu en Xmark
+function menuOuvertFermer (){
+    if (lineMenuH.className == "line") {
+      lineMenuH.className = "";
+      lineMenuC.className = "";
+      lineMenuB.className = "";
+    } else {
+      lineMenuH.className = "line";
+      lineMenuC.className = "line";
+      lineMenuB.className = "line";
+    }
+}
+
+
+
+
+// ferme toute les section sauf celle selectionné
+function fermerSection(indexSection){
+  for (const index in section) {
+    if (index <= section.length - 1) {
+      section[index].style.display = "none";
+    }
+  }
+  menu.classList.add("disparition_menu");
+  listeCarte.classList.add("disparition_liste_carte_section");
+  listeCarte.style.display = "none";
+  retourPresentation.style.display = "none";
+  setTimeout(() => {
+    menu.style.display = "none";
+    if(indexSection == "m"){
+      listeCarte.classList.replace("disparition_liste_carte_section","apparition_liste_carte_section");
+      retourPresentation.style.display = "none";
+      listeCarte.style.display="flex"
+    } else {
+      section[indexSection].style.display = "flex";
+      retourPresentation.style.display = "flex";
+    }
+  }, 200);
+}
+
+
+
+
 
 btnMenu.addEventListener("click", () => {
   
   if(menu.style.display == "flex"){
     menu.style.opacity ="100%"
     menu.style.animationName = "disparition_menu";
-    menu.style.animationDuration = "0.5s";
-    setTimeout( () => { menu.style.display = "none"},500)
+    retourPresentation.style.display = "none";
+    setTimeout( () => { menu.style.display = "none"},200)
   }else{
+    retourPresentation.style.display = "flex";
     menu.style.opacity ="0%"
     menu.style.animationName = "apparition_menu";
     menu.style.animationDuration = "0.5s";
     menu.style.display = "flex"
   }
   
-  if (lineMenuH.className == "line") {
-    
-    lineMenuH.className = "";
-    lineMenuC.className = "";
-    lineMenuB.className = "";
-    
-  } else {
-    lineMenuH.className = "line";
-    lineMenuC.className = "line";
-    lineMenuB.className = "line";
-  }
+  menuOuvertFermer()
 });
 
-let presentationMenu = document.querySelector(".S1")
-let experienceMenu = document.querySelector(".S2");
-let formationMenu = document.querySelector(".S3");
-let logicielsMenu = document.querySelector(".S4");
-let retourPresentation = document.querySelector(".retour_presentation")
 
 
 
 presentationMenu.addEventListener("click", () => {
-  AfficherCartePresentation()
-  if (lineMenuH.className == "line") {
-    lineMenuH.className = "";
-    lineMenuC.className = "";
-    lineMenuB.className = "";
-  } else {
-    lineMenuH.className = "line";
-    lineMenuC.className = "line";
-    lineMenuB.className = "line";
-  }
+  fermerSection("m");
+  menuOuvertFermer();
 });
 
 retourPresentation.addEventListener("click", () => {
-  AfficherCartePresentation()
+  fermerSection("m")
 });
 
 
-function AfficherCartePresentation (){
-  for(const index in section){
-    if(index <= section.length-1){
-      section[index].style.display="none";
-    }
-  }
-  menu.style.opacity = "100%";
-  menu.style.animationDuration = "1s";
-  menu.style.animationName = "disparition_menu";
-  listeCarte.style.animationName = "apparition";
-  listeCarte.style.display="flex";
-  retourPresentation.style.display="none"
-  setTimeout(() => {
-    menu.style.display = "none";
-  }, 1000);
-  
-}
-
 experienceMenu.addEventListener("click", () => {
-  for (const index in section) {
-    if (index <= section.length - 1) {
-      section[index].style.display = "none";
-    }
-  };
-  menu.style.opacity = "100%";
-  menu.style.animationDuration = "1s";
-  menu.style.animationName = "disparition_menu";
-  listeCarte.style.animationDuration = "1s";
-  listeCarte.style.animationName = "disparition";
-  listeCarte.style.display = "none";
-  setTimeout(() => {
-    menu.style.display = "none";
-    section[0].style.display = "flex";
-    retourPresentation.style.display="flex"
-  }, 1000);
+  fermerSection(0)
 
-  if (lineMenuH.className == "line") {
-    lineMenuH.className = "";
-    lineMenuC.className = "";
-    lineMenuB.className = "";
-  } else {
-    lineMenuH.className = "line";
-    lineMenuC.className = "line";
-    lineMenuB.className = "line";
-  }
+  menuOuvertFermer();
 });
 
 formationMenu.addEventListener("click", () => {
-  for (const index in section) {
-    if (index <= section.length-1) {
-      section[index].style.display = "none";
-    }
-  };
-  menu.style.opacity = "100%";
-  menu.style.animationDuration = "1s";
-  menu.style.animationName = "disparition_menu";
-  listeCarte.style.animationDuration = "1s";
-  listeCarte.style.animationName = "disparition";
-  listeCarte.style.display = "none";
-  setTimeout(() => {
-    menu.style.display = "none";
-    section[2].style.display = "flex";
-    retourPresentation.style.display="flex"
+  fermerSection(2)
 
-  }, 1000);
-
-  if (lineMenuH.className == "line") {
-    lineMenuH.className = "";
-    lineMenuC.className = "";
-    lineMenuB.className = "";
-  } else {
-    lineMenuH.className = "line";
-    lineMenuC.className = "line";
-    lineMenuB.className = "line";
-  }
+  menuOuvertFermer();
 });
 
 logicielsMenu.addEventListener("click", () => {
-  for (const index in section) {
-    if (index <= section.length - 1) {
-      section[index].style.display = "none";
-    }
-  };
-  menu.style.opacity = "100%";
-  menu.style.animationDuration = "1s";
-  menu.style.animationName = "disparition_menu";
-  listeCarte.style.animationDuration = "1s";
-  listeCarte.style.animationName = "disparition";
-  listeCarte.style.display = "none";
-  setTimeout(() => {
-    menu.style.display = "none";
-    section[1].style.display = "flex";
-    retourPresentation.style.display="flex"
+  fermerSection(1)
 
-  }, 1000);
-
-  if (lineMenuH.className == "line") {
-    lineMenuH.className = "";
-    lineMenuC.className = "";
-    lineMenuB.className = "";
-  } else {
-    lineMenuH.className = "line";
-    lineMenuC.className = "line";
-    lineMenuB.className = "line";
-  }
+  menuOuvertFermer();
 });
 
 
@@ -180,91 +124,47 @@ let carte             = document.getElementsByClassName("carte")
 let listeCarte        = document.querySelector(".liste_cartes");
 let section           = document.getElementsByClassName("section");
 
-document.querySelector('.C2').addEventListener("click", () => {
-  for(const index in carte){
+
+
+// affichage du contenu des cartes de presentation
+function activationCarte(indexCarte) {
+  for (const index in carte) {
     if (index <= carte.length - 1) {
       carte[index].classList.remove("activeCarte");
-      carte[index].classList.remove("background");
-      carte[0].classList.add("activeCarte");
-      carte[0].classList.add("background");
+      carte[indexCarte].classList.add("activeCarte");
 
-      contenuCarte[index].classList.remove("activeContenu");
-      contenuCarte[0].classList.add("activeContenu");
+      // contenuCarte[index].classList.remove("activeContenu");
+      // contenuCarte[indexCarte].classList.add("activeContenu");
     }
-  };
-});
+  }
+}
 
+document.querySelector(".C2 .titre_carte").addEventListener("click", () => {
+  activationCarte(0);
+});
+    
 contenuCarte[0].addEventListener("click", () => {
-  listeCarte.style.animationDuration="1s"
-  listeCarte.style.animationName ="disparition"
-  setTimeout( () => { 
-    listeCarte.style.display ="none";
-    section[0].style.display ="flex"
-    retourPresentation.style.display="flex"
-},1000)
+      fermerSection(0)
 })
 
-document.querySelector('.C3').addEventListener("click", () => {
-  for(const index in carte){
-    if (index <= carte.length - 1) {
-      carte[index].classList.remove("background");
-      carte[index].classList.remove("activeCarte");
-      carte[1].classList.add("activeCarte");
-      carte[1].classList.add("background");
-
-      contenuCarte[index].classList.remove("activeContenu");
-      contenuCarte[1].classList.add("activeContenu");
-    }
-  };
+document.querySelector(".C3 .titre_carte").addEventListener("click", () => {
+  activationCarte(1);
 });
 
 contenuCarte[1].addEventListener("click", () => {
-  listeCarte.style.animationDuration = "1s";
-  listeCarte.style.animationName = "disparition";
-  setTimeout(() => {
-    listeCarte.style.display = "none";
-    section[1].style.display = "flex";
-    retourPresentation.style.display="flex"
-  }, 1000);
+  fermerSection(1);
 });
 
-document.querySelector('.C4').addEventListener("click", () => {
-  for(const index in carte){
-    if (index <= carte.length - 1) {
-      carte[index].classList.remove("background");
-      carte[index].classList.remove("activeCarte");
-      carte[2].classList.add("activeCarte");
-      carte[2].classList.add("background");
-
-      contenuCarte[index].classList.remove("activeContenu");
-      contenuCarte[2].classList.add("activeContenu");
-    }
-  };
+document.querySelector(".C4 .titre_carte").addEventListener("click", () => {
+  activationCarte(2);
 });
 
 contenuCarte[2].addEventListener("click", () => {
-  listeCarte.style.animationDuration = "1s";
-  listeCarte.style.animationName = "disparition";
-  setTimeout(() => {
-    listeCarte.style.display = "none";
-    section[2].style.display = "flex";
-    retourPresentation.style.display="flex"
-  }, 1000);
+  fermerSection(2);
 });
 
-document.querySelector('.C1').addEventListener("click", () => {
-  for (const index in contenuCarte) {
-    if (index <= carte.length - 1) {
-      carte[index].classList.remove("background");
-      carte[index].classList.remove("activeCarte");
-      carte[3].classList.add("activeCarte");
-      carte[3].classList.add("background");
-
-      contenuCarte[index].classList.remove("activeContenu");
-      contenuCarte[3].classList.add("activeContenu");
-    }
-  };
-  
+document.querySelector(".C1 .titre_carte").addEventListener("click", () => {
+  activationCarte(3);
 });
 
 

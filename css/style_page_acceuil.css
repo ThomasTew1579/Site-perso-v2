@@ -18,7 +18,7 @@ body {
   color: #fcf3e2;
   bottom: 5%;
   right: 15%;
-  animation: disparition_titre_acceuil 1s ease 1s forwards;
+  animation: disparition_titre_acceuil 0.5s ease 0.8s forwards;
   z-index: 5;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .animationSlide {
-  animation: openSlide 4.5s ease -1.5s forwards;
+  animation: openSlide 3s ease -0.8s forwards;
 }
 
 @keyframes openSlide {
@@ -112,7 +112,7 @@ body {
   font-size: 25px;
   opacity: 0;
   filter: blur(5px);
-  animation: apparition_titre 2s ease 1.5s forwards;
+  animation: apparition_titre 1.5s ease 1s forwards;
 }
 
 @keyframes apparition_titre {

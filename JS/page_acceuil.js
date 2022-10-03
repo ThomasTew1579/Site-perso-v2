@@ -15,7 +15,7 @@ entrer.addEventListener("click", () => {
     acceuil.style.display ="none"
     activeContenu();
     acceuilSlideR.style.display ="none"
-  }, 2000);
+  }, 600);
 });
 
 // ======================================================evenement page acceuil
