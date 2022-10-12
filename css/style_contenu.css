@@ -26,6 +26,11 @@ nav{
     background: rgba(235, 235, 235, 0.318);
     animation: apparition_nav 0.5s ease forwards;
     backdrop-filter: blur(5px) brightness(80%);
+    -webkit-backdrop-filter: blur(5px) brightness(80%);
+}
+
+#setting{
+    display: none;
 }
 
 .navConteneur{
@@ -65,6 +70,10 @@ nav{
 /* -----------------------------------------------------------------------header */
 
 /* nav/menu--------------------------------------------------------------------- */
+
+#menuLiens{
+    display: none;
+}
 
 #menuLogo{
     cursor: pointer;
@@ -125,6 +134,7 @@ nav{
     animation: 0.2s ease forwards;
     overflow: hidden;
     backdrop-filter: blur(10px) brightness(60%) ;
+    -webkit-backdrop-filter: blur(10px) brightness(60%) ;
     
 }
 
@@ -302,6 +312,32 @@ a {
 
 
 /* --------------------------------------------------- apparition des SECTIONS du menu */
+
+/* boutton setting-------------------------------------------------------------------  */
+
+    
+    #SB{
+        display: flex;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.8s;
+        margin-top: 10vh;
+        cursor: pointer;
+    }
+
+
+    .themeBox{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 6px;
+        box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+        margin: 2vw;
+    }
+
+/* -------------------------------------------------------------------boutton setting  */
 
 /* ---------------------------------------------------------------------------nav/menu */
 

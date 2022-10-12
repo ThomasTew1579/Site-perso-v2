@@ -4,7 +4,7 @@
 .section {
     margin: 5px 10px;
     color: rgb(0, 0, 0);
-    background: rgba(255, 255, 255, 0.463);
+    background: rgba(255, 255, 255, 0.512);
     border-radius: 6px;
     transition: 0.5s ease;
     font-family: "Roboto";
@@ -102,7 +102,7 @@
 
 .galerie { 
   display: flex;
-  background: #030712df; 
+  background: rgba(235, 235, 235, 0.636);
   width: 100%;
   border-radius:20px;
   margin: 0;
@@ -170,7 +170,7 @@
     top: -2%;
     margin: auto;
     font-size: 50px;
-    color: #ffffffde;
+    color: #000000de;
 
 }
 

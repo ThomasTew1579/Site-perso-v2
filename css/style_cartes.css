@@ -62,12 +62,11 @@
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.463);
+    background: rgba(255, 255, 255, 0.509);
 }
 
 .titre_carte{
     background: rgba(235, 235, 235, 0.636);
-	border-bottom: 1px solid rgba(0,0,0,0.1);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -91,15 +90,12 @@
 }
 
 .contenu_carte{
-    /* display: none; */
     height: calc(73vh - 90px);
     margin: 0 5% 0 5%;
     justify-content: space-around;
     flex-direction: column;
     text-justify:inter-word;
     text-align:left;
-    /* opacity: 0; */
-    
 } 
 
 .contenu_carte i{
@@ -110,6 +106,25 @@
     text-align: center;
     color: black;
     margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    justify-content: space-around;
+    animation: defiler 10s linear infinite reverse;
+}
+
+.contenu_carte h4 i{
+    animation: agrandissement 1s linear infinite alternate ;
+}
+
+@keyframes agrandissement {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.5;
+    }
+    
 }
 
 .activeCarte{
@@ -156,7 +171,8 @@
     height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 0 0 0 15px;
 }
 
 /* ------------------------------------------------carte experience */
@@ -171,7 +187,10 @@
     align-items: center;
 }
 
-
+.C3 .contenu_carte{
+    display: flex;
+    justify-content: space-between;
+}
 
 .ligne_logo img{
     margin-bottom: 2vh;
@@ -186,13 +205,13 @@
 .adobe{
     width: 300%;
     justify-content: space-around;
-    animation: defiler 10s linear infinite;
+    animation: defiler 20s linear infinite reverse;
 }
 
 .dessin{
     width: 400%;
     justify-content: space-around;
-    animation: defiler 10s linear infinite reverse;
+    animation: defiler 30s linear infinite;
 }
 
 @keyframes defiler {
@@ -214,7 +233,8 @@
     height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 0 0 0 15px;
 }
 
 

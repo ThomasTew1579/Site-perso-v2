@@ -11,7 +11,6 @@ entrer.addEventListener("click", () => {
   
   acceuilSlideR.className = "animationFermeture";
   setTimeout(() => {
-    // window.location.replace("section/Liste_Carte.html");
     acceuil.style.display ="none"
     activeContenu();
     acceuilSlideR.style.display ="none"
